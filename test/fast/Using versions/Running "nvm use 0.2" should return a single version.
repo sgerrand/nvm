@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mkdir ../../../v0.2.{1,2,3,4,5}
+
+. ../../../nvm.sh
+
+nvm use 0.2 | grep 'Now using node v0.2.5'

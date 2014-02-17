@@ -57,6 +57,13 @@ nvm_version() {
   fi
 
   VERSION=`nvm_ls $PATTERN`
+
+  # Ensure that a single version is returned
+  local V
+  for version in $VERSION; do
+    V=$version
+  done
+  VERSION=$V
   echo "$VERSION"
 
   if [ "$VERSION" = 'N/A' ]; then
